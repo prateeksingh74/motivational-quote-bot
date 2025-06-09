@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1BrFz-8pRE-HEXwHXWdJjA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="usatoday.com/story/life/2023/11/30/positive-quotes-to-inspire/11359498002" DesignTimeRectangle="359, 475, 788, 75" ElementType="ListItem" FullSelectorArgument="&lt;webctrl tag='LI' /&gt;" Guid="14ad2379-4c04-4e2c-8493-0814ec41e376" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Inspirational quotes: 50 motivational words to brighten your day' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="4b7d650468caefb5bedbbc1d50aaf072.png" xmlns="">0bK1L9XgYE0SjQ_cmu-3ERQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

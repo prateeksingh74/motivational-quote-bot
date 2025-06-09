@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umamm="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Models;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -25,6 +25,31 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -53,13 +78,109 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.MetadataLoadContext</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="925.2,997.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="saveTo" />
+      <Variable x:TypeArguments="ui:UiElement" Name="outputElement">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">NApplicationCard_1</x:String>
+            <x:String x:Key="SourcePropertyName">OutUiElement</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="quoteText" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,492.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[outputElement]" ScopeGuid="5d5f7d9d-7c98-4076-82da-768d8b2de3e4">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,244" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="quoteText" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'It takes courage to gr…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,182.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="5d5f7d9d-7c98-4076-82da-768d8b2de3e4" TextString="[saveTo]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="usatoday.com/story/life/2023/11/30/positive-quotes-to-inspire/11359498002" ContentHash="1BrFz-8pRE-HEXwHXWdJjA" DesignTimeRectangle="359, 475, 788, 75" ElementType="ListItem" FullSelectorArgument="&lt;webctrl tag='LI' /&gt;" Guid="14ad2379-4c04-4e2c-8493-0814ec41e376" InformativeScreenshot="4b7d650468caefb5bedbbc1d50aaf072.png" Reference="eMULU5UPqUeTmWgZRH_gaQ/J1soshJPsEuH7ZXo71b6Vg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Inspirational quotes: 50 motivational words to brighten your day' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="aKqhnno7BE6W5DO-uUDwUA" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="c3e112eea3928e629255ae5fe281e1e8.jpg" Reference="eMULU5UPqUeTmWgZRH_gaQ/gwrJ3mZg-k-YL4y1Orkrfg" Selector="&lt;html app='chrome.exe' title='Inspirational quotes: 50 motivational words to brighten your day' /&gt;" Url="https://www.usatoday.com/story/life/2023/11/30/positive-quotes-to-inspire/11359498002/" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" Mailbox="{x:Null}" MailboxBackup="{x:Reference __ReferenceID0}" ReplyTo="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" Body="[&quot;Here is your daily motivational quote: &quot; + saveTo]" ConnectionId="faf48a70-d347-4271-83c9-d321912ad109" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="483.2,450.4" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Motivational Quote for You" To="[New String(){&quot;prateek.singh06@outlook.com&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
+      <umam:SendMailConnections.AttachmentsBackup>
+        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umam:SendMailConnections.AttachmentsBackup>
+      <umam:SendMailConnections.InputTypeBackup>
+        <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="HTML">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="umame:BodyInputType, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </umam:SendMailConnections.InputTypeBackup>
+      <umam:SendMailConnections.MailboxArg>
+        <umamm:MailboxArgument SharedMailbox="{x:Null}" UseSharedMailbox="False">
+          <umamm:MailboxArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID0" StoredValue="NoMailbox">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </umamm:MailboxArgument.Backup>
+        </umamm:MailboxArgument>
+      </umam:SendMailConnections.MailboxArg>
+    </umam:SendMailConnections>
   </Sequence>
 </Activity>
